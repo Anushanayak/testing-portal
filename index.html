@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Force</title>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Circular Content Carousel with jQuery" />
+        <meta name="keywords" content="jquery, conent slider, content carousel, circular, expanding, sliding, css3" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/dropstyle.css" />
+        <link rel="stylesheet" href="css/awiconfont-embedded.css">
+        <link rel="shortcut icon" href="images/favicon_ico">
+        <script src="js/jscript.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+$(function() {
+$(document).click(function() {
+    // Adding the conditional will only fire when the element has the class available
+    if( $('.dropdown-button.active').hasClass("active") ) {
+      $('.dropdown-button.active').removeClass("active");
+      // console.log('Triggered');
+    }
+});
+
+$(".dropdown-button").click(function(event) {
+    $(this).toggleClass("active");
+    event.stopPropagation();
+});
+           });
+</script>
+    </head>
+    <body>
+		<div class="container">
+			
+			<div class="wrap">
+            <div class="sales-fn">
+            	<span class="newwit"><a href="#"><i class="icon-new-wit"></i>New Wit</a></span>
+                <a onClick="show('Page2');">
+            	<span class="searchcont"><i class="icon-radio" id="chk" ></i>Search All Content</span>
+                </a>
+                <a onClick="show('Page1');">
+                <span class="contcontent"><i class="icon-radio-selected" id="chk1"></i>Contextual Content</span>
+                </a>
+            </div>
+            <!-- Start hidden contextual content -->
+            <div class="contextualcontopen" id="Page1" style="">
+            
+            	<label class="contextualcontselect dropdown-button" >
+                        <input type="text" name="" value="" placeholder="List of Objects" onClick="return false;">
+                        <div class="bubble">
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked11();" id="percheck"></i>Personal</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked12();" id="sharcheck"></i>Shared</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked13();" id="witscheck"></i>Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked14();" id="combocheck"></i>Combo Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked15();" id="companycheck"></i>Company</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked16();" id="premmnycheck"></i>Premium</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked17();" id="acronycheck"></i>Acronyms</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked18();" id="noacronycheck"></i>No Acronyms</span>
+                        </div>
+                </label>
+               
+                <label class="contextualcontselect dropdown-button">
+                        <input type="text" name="" value="" placeholder="List of Attributes" onClick="return false;">
+                         <div class="bubble">
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked21();" id="percheck2"></i>Personal</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked22();" id="sharcheck2"></i>Shared</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked23();" id="witscheck2"></i>Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked24();" id="combocheck2"></i>Combo Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked25();" id="companycheck2"></i>Company</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked26();" id="premmnycheck2"></i>Premium</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked27();" id="acronycheck2"></i>Acronyms</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked28();" id="noacronycheck2"></i>No Acronyms</span>
+                        </div>
+                </label>
+                <label class="contextualcontselect dropdown-button">
+                        <input type="text" name="" value="" placeholder="List of Values/Tags" onClick="return false;">
+                        <div class="bubble">
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked31();" id="percheck3"></i>Personal</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked32();" id="sharcheck3"></i>Shared</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked33();" id="witscheck3"></i>Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked34();" id="combocheck3"></i>Combo Wits</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked35();" id="companycheck3"></i>Company</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked36();" id="premmnycheck3"></i>Premium</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked37();" id="acronycheck3"></i>Acronyms</span>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked38();" id="noacronycheck3"></i>No Acronyms</span>
+                        </div>
+                </label>
+                <label class="contextualcontselect dropdown-button">
+                        <input type="text" name="" value="" placeholder="Group by" onClick="return false;">
+                        <div class="bubble4">
+                            <div class="groupitem">Name</div>
+                            <div class="groupitem">Date created</div>
+                            <div class="groupitem">Date Modified</div>
+                            <div class="groupitem">Most Used</div>
+                            <div class="groupitem">Most Rated</div>
+                            <div class="groupitem">Size</div>
+                            <div class="groupitem">Favorite</div>
+                            <div class="groupitem">Attachment</div>
+                            
+                        </div>
+                </label>
+                
+                <div class="contextualcontfind"><i class="icon-find"></i></div>
+            </div>
+                <!-- End hidden contextual content -->
+                
+                <!-- Start hidden search content -->
+            <div class="contextualcontopen" id="Page2" style="display:none">
+            	<div class="contextualcontfilter dropdown-button"><i class="icon-filter" onClick="return false;"></i>
+                	<div class="bubble6">
+                            <div class="filter-header">
+                            	<div class="filterheadericon"><i class="icon-filter"></i> FILTER BY</div>
+                                <div class="filterheadercloseicon"><i class="icon-close"></i></div>
+                            </div>
+                            <div class="filter-body">
+                            	<div class="filter-block1">
+                            	<div class="filteritem1">
+                                	<div class="filetr-list"> <i class="icon-checkbox" onClick="checked51();" id="personalfil1"></i>Personal</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked52();" id="sharedfil1"></i>Shared</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked53();" id="companyfil1"></i>Company</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked54();" id="premiumfil1"></i>Premium</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked55();" id="witsfil1"></i>Wits</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked56();" id="combofil1"></i>Combo Wits</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked57();" id="acrofil1"></i>Acronyms</div>
+                                    <div class="filetr-list"> <i class="icon-checkbox" onClick="checked58();" id="noacrofil1"></i>No Acronyms</div>
+                                    
+                                </div>
+                                <div class="go-btn">GO</div>
+                                </div>
+                                <hr>
+                                <div class="filter-block1">
+                            	<div class="filteritem2">
+                                	<div class="filetr-list2"> <i class="icon-radio" onClick="checked61();" id="wittit"></i>Wit Title</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked62();" id="contentfil2"></i>Content</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked63();" id="attfil2"></i>Attachment</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked64();" id="folfil2"></i>Folder</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked65();" id="tagfil2"></i>Tag</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked66();" id="tagcatfil2"></i>Tag Cat</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked67();" id="tagsubfil2"></i>Tag Sub-Cat</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked68();" id="subcattfil2"></i>Status</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked69();" id="statfil2"></i>Label</div>
+                                    <div class="filetr-list2"> <i class="icon-radio" onClick="checked70();" id="namefil2"></i>Name</div>
+                                    
+                                </div>
+                             
+                                </div>
+                                <hr>
+                               <div class="filter-block3">
+                               	<input type="text" name="FirstName" value="" placeholder="Enter Keywords">
+                                <div class="add-btn">Add</div>
+                               </div>
+                               <div class="filter-block4" >
+                               		<div class="wittitle">Wit Title :</div>
+                                    <div class="wittitle-list">
+                                    	<div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        <div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                               </div>
+                               <div class="filter-block4" >
+                               		<div class="wittitle">Tag Cat&nbsp;&nbsp;:</div>
+                                    <div class="wittitle-list">
+                                    	<div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        <div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        <div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="filter-block4" >
+                               		<div class="wittitle">Folder&nbsp;&nbsp;&nbsp;&nbsp;:</div>
+                                    <div class="wittitle-list">
+                                    	<div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        <div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                        <div class="wittitle-list-name">Lorem Ipsum
+                                        <div class="filtersearchcloseicon"><i class="icon-close"></i></div>
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                
+                </div>
+            	<div class="searchbox dropdown-button">
+                <form action="" method="post">
+                	<input type="search" id="search-box" name="find" placeholder="Search Objects" onClick="return false;" >
+                    <span class="searchword" >|  All Content <i class="icon-arrow-down-solid"></i></span>
+                    
+                    <span class="searchfindicon"><i class="icon-findd"></i></span>
+            		<div class="bubble5">
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked41();" id="allcont"></i>All Contents</span><br>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked42();" id="wit"></i>Wit</span><br>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked43();" id="folder"></i>Folder</span><br>
+                            <span class="checkitems"><i class="icon-checkbox" onClick="checked44();" id="tagwits"></i>Tag Wits</span><br>
+                        </div>
+                </form>
+                
+                </div>
+                
+            </div>
+                <!-- End hidden search content -->
+                
+                
+			<div id="ca-container" class="ca-container">
+            
+				<div class="ca-wrapper">
+                <!-- block1 -->
+                
+					<div class="ca-item">
+                    	<a href="#openModal">
+						<div class="ca-item-main" id="block1">
+							<div class="ca-item-mainblock">
+								<div class="ca-itemblock-header">
+                                        <div class="star-rating">
+                                        	<div class="rating">
+    
+                                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" ></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label>
+                                            </div>
+                                            
+                                        </div> 
+                                        <i class="icon-edit-wit-rating"></i>
+                                        
+                                        <div class="ca-itemblockheaderrightcont">
+                                        	<i class="icon-label-red"></i>
+                                            <i class="icon-review"></i>
+                                            <i class="icon-widget-collapse"></i>
+                                            <i class="icon-clipboard"></i>
+                                            <i class="icon-mail"></i>
+                                            <i class="icon-comments"></i>
+                                            <i class="icon-info"></i>
+                                        </div>
+                                </div>
+                                <div class="ca-itemblock-mailbody">
+                                	<div class="header-mailsubject" id="header-mailsubject">
+                                     Apologizing for not being in touch for a long...
+                                    </div>
+                                    <div class="header-mailbody">
+                                     	<p>
+                                        WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied) to launch at the prestigious LAUNCH conference. It was well received by the respected judges and the audience.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ca-itemblock-attachment">
+                                	<div class="ca-itemblock-attachmentheader"> <i class="icon-attachment"></i> Attachment</div>
+                                    <div class="attachmentlists">
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                                    </div>
+                                </div>
+								
+							</div>
+						</div>
+                        </a>
+                        
+                        <div id="openModal" class="openwit">
+                    
+                            <div class="ca-item-mainhover">
+                            
+								<div class="ca-itemblock-headerhover">
+                                <!--<a href="#close" title="Close" class="close">X</a>-->
+                                		<div class="start-holder">
+                                        <div class="star-ratinghover">
+                                        	<div class="rating">
+    
+                                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" ></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="start-count">(0)</div> 
+                                        <div class="start-title"><i>Rate this Wit</i></div>
+                                        </div>
+                                        <i class="icon-edit-wit-rating"></i>
+                                        
+                                        <div class="wit-operaters">
+                                        <div class="ca-itemblock-oprts"><i class="icon-save"></i><br>Save</div>
+                                        <div class="ca-itemblock-oprts"><i class="icon-delete"></i><br>Delete</div>
+                                        <div class="ca-itemblock-oprts"><i class="icon-find"></i><br>Find</div>
+                                        <div class="ca-itemblock-oprts"><i class="icon-post"></i><br>Post</div>
+                                        <div class="ca-itemblock-oprts"><i class="icon-analytics"></i><br>Analytics</div>
+                                        <div class="ca-itemblock-oprts"><i class="icon-edit"></i><br>Edit Wit</div>
+                                        </div>
+                                </div>
+                                <div class="ca-itemblock-mailbodyhover">
+                                	<div class="header-mailsubjecthover">
+                                     <h2>Meeting Request for discussing a business deal or sales opportunity </h2>
+                                     <h4>Created by: premiumadmin@wittyparrot.com on Wed 28 august 2013 06:39:44</h4>
+                                    </div>
+                                    <div class="ca-itemblock-findblock">
+                                    	<div class="ca-itemblock-findfield">
+                                        	Find: <input type="search"><span class="searchfindicon"><i class="icon-findd"></i></span>
+                                        </div>
+                                        <div class="ca-itemblock-findclose">
+                                        	<i class="icon-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="ca-itemblock-findblock">
+                                        <div class="wittitle-list-title">Lorem</div>
+                                        <div class="wittitle-list-title">Lorem Ipsum</div>
+                                    </div>
+                                    <div class="header-mailbodyhover">
+                                     	<p>
+                                        WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied) to launch at the prestigious LAUNCH conference. It was well received by the respected judges and the audience.WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied).
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="page-attachment"><!--Start page-attachment--->
+            	<div class="att-header"><!--Start att-header--->
+                	<i class="icon-attachments"></i>Attachments<span id="hide" onClick="openme();" ><i  id="downarrow" class="icon-arrow-down-solid" ></i>Hide</span>
+                    
+                </div><!--End att-header--->
+                <!--Start of hidden attachment -->
+                    <div class="att-icon" id="collapse1">
+                    	<div class="ca-wititemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                        <div class="ca-wititemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                        <div class="ca-wititemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                    </div>
+                    <!--<div class="attachmentlists" id="collapse1">
+                        <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                        <div class="ca-itemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                        <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                    </div>-->
+                    <!--End of hidden attachment -->
+                    <div style=" height:10px; width:100%;"></div>
+                    <div id="tagg"><!--Start hiddencontent--->
+                    <!--Start of hidden tag -->
+                    <div class="att-tag" style="display: none;" id="hidden_tag" >
+                    	<span>anusha</span>
+                        <span>anusha</span>
+                        <span>anusha</span>
+                        
+                    </div>
+                    <!--End of hidden tag -->
+                    <!--Start of hidden note -->
+                    <div class="att-note" style="display: none;" id="hidden_note" >
+                    	<div class="att-note-p">
+                        	<p>
+                            I started using Witty Parrot a few weeks ago, and I can't stop. My email SIG info? Now in Witty Parrot. My responses to dozens of people doing an MBTI teambuilding? Now in Witty Parrot. 
+                            </p>
+                        </div>
+                    </div>
+                    <!--End of hidden note -->
+                    <!--Start of hidden comments -->
+                    <div class="att-comments" style="display: none;" id="hidden_comments" >
+                    	<div class="att-comments-p">
+                        	<div class="profilepic">
+                            	<i class="icon-profile"></i>
+                            </div>
+                            <div class="profilename">
+                            	anusha@wittyparrot.com
+                                <br />
+                                <p>
+                                I started using Witty Parrot a few weeks ago, and I can't stop.
+                                </p>
+                                <p class="date">03 Mar 2014 03:57:43 PM</p>
+                                <hr />
+                            </div>
+                        </div>
+                        <div class="att-comments-p">
+                        	<div class="profilepic">
+                            	<i class="icon-profile"></i>
+                            </div>
+                            <div class="profilename">
+                            	anusha@wittyparrot.com
+                                <br />
+                                <p>
+                                I started using Witty Parrot a few weeks ago, and I can't stop.
+                                </p>
+                                <p class="date">03 Mar 2014 03:57:43 PM</p>
+                                <hr />
+                            </div>
+                        </div>
+                    </div>
+                    <!--End of hidden comments -->
+                    <!--Start of hidden version -->
+                    <div class="att-version" style="display: none;" id="hidden_version" >
+                    	<div class="att-version-p">
+                    		<div class="ca-wititemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                        <div class="ca-wititemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                        <div class="ca-wititemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                        </div>
+                    </div>
+                    <!--End of hidden version -->
+                    </div><!--End hiddencontent--->
+                    <div class="att-headermenu"><!--Start hiddencontent--->
+                    	<ul class="menu"> 
+                			<a href="#"><li  onClick="showHide('hidden_tag'); return false;" id="l1"><i class="icon-tag"></i>Tags</li></a>
+                            <a href="#"><li onClick="showHide('hidden_note'); return false;" id="l2"><i class="icon-note" ></i>Notes</li></a>
+                            <a href="#"><li onClick="showHide('hidden_comments'); return false;" id="l3"><i class="icon-comments"></i>Comments</li></a>
+                            <a href="#"><li onClick="showHide('hidden_version'); return false;" id="l4"><i class="icon-version"></i>Version</li></a>
+    					</ul>
+            <span id="hide1" style="float:right" onClick="opentag();" >                        <i id="downarrow1" class="icon-arrow-right-solid" ></i>Show</span>
+                    </div><!--End hiddencontent--->
+            </div>
+                                
+							
+                            </div>
+                        </div>
+                        
+					<div class="ca-blockcount">1/4</div>
+					</div>
+                    
+                    <!-- block2 -->
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-item-mainblock">
+								<div class="ca-itemblock-header">
+                                        <div class="star-rating">
+                                        	<div class="rating">
+    
+                                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" ></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label>
+                                            </div>
+                                            
+                                        </div>
+                                        <i class="icon-edit-wit-rating"></i>
+                                        
+                                        <div class="ca-itemblockheaderrightcont">
+                                        	<i class="icon-label-orange"></i>
+                                            <i class="icon-review"></i>
+                                            <i class="icon-reset"></i>
+                                            <i class="icon-widget-collapse"></i>
+                                            <i class="icon-clipboard"></i>
+                                            <i class="icon-mail"></i>
+                                            <i class="icon-comments"></i>
+                                            <i class="icon-info"></i>
+                                        </div>
+                                </div>
+                                <div class="mailbodywidget">
+                                	<label>Lorem Ipsum Lorem</label><input type="text" name="FirstName" value=""><br>
+                                    <label>Lorem Ipsum</label><input type="text" name="FirstName" value=""><br>
+                                </div>
+                                <div class="ca-itemblock-mailbody2">
+                                	<div class="header-mailsubject2">
+                                     Apologizing for a miscommunic...
+                                    </div>
+                                    <div class="header-mailbody2">
+                                     	<p>
+                                        WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied) to launch at the prestigious LAUNCH conference. It was well received by the respected judges and the audience.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ca-itemblock-attachment">
+                                	<div class="ca-itemblock-attachmentheader"> <i class="icon-attachment"></i> Attachment</div>
+                                    <div class="attachmentlists">
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+                        <div class="ca-blockcount">2/4</div>
+					</div>
+                    <!-- block3 -->
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-item-mainblock">
+								<div class="ca-itemblock-header">
+                                        <div class="star-rating">
+                                        	<div class="rating">
+    
+                                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" ></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label>
+                                            </div>
+                                            
+                                        </div>
+                                        <i class="icon-edit-wit-rating"></i>
+                                        
+                                        <div class="ca-itemblockheaderrightcont">
+                                        	<i class="icon-label-blue"></i>
+                                            <i class="icon-review"></i>
+                                            <i class="icon-widget-collapse"></i>
+                                            <i class="icon-clipboard"></i>
+                                            <i class="icon-mail"></i>
+                                            <i class="icon-comments"></i>
+                                            <i class="icon-info"></i>
+                                        </div>
+                                </div>
+                                <div class="mailbodytags">
+                                	<div>Lorem Ipsum</div>
+                                    <div>Lorem Ipsum</div>
+                                    <div>Lorem Ipsum</div>
+                                    <div>Lorem Ipsum</div>
+                                </div>
+                                <div class="ca-itemblock-mailbody3">
+                                	<div class="header-mailsubject" id="header-mailsubject">
+                                     Apologizing for not being in touch for a long...
+                                    </div>
+                                    <div class="header-mailbody3">
+                                     	<p>
+                                        WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied) to launch at the prestigious LAUNCH conference. It was well received by the respected judges and the audience. It was well received by the respected judges and the audience. It was well received by the respected judges and the audience. It was well received by the respected judges and the audience. It was well received by the respected judges and the audience.
+                                        </p>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+						<div class="ca-blockcount">3/4</div>
+					</div>
+                    <!-- block4 -->
+					<div class="ca-item">
+						<div class="ca-item-main">
+							<div class="ca-item-mainblock">
+								<div class="ca-itemblock-header">
+                                        <div class="star-rating">
+                                        	<div class="rating">
+    
+                                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label>
+                                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" ></label>
+                                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label>
+                                            </div>
+                                            
+                                        </div>
+                                        <i class="icon-edit-wit-rating"></i>
+                                        
+                                        <div class="ca-itemblockheaderrightcont">
+                                        	<i class="icon-label-orange"></i>
+                                            <i class="icon-review"></i>
+                                            <i class="icon-reset"></i>
+                                            <i class="icon-widget-collapse"></i>
+                                            <i class="icon-clipboard"></i>
+                                            <i class="icon-mail"></i>
+                                            <i class="icon-comments"></i>
+                                            <i class="icon-info"></i>
+                                        </div>
+                                </div>
+                                <div class="mailbodywidget">
+                                	<label>Lorem Ipsum</label><input type="text" name="FirstName" value=""><br>
+                                    <label>Lorem Ipsum</label><input type="text" name="FirstName" value=""><br>
+                                </div>
+                                <div class="ca-itemblock-mailbody2">
+                                	<div class="header-mailsubject2">
+                                     Apologizing for not being in touch for a long...
+                                    </div>
+                                    <div class="header-mailbody2">
+                                     	<p>
+                                        WittyParrot was chosen as one of the 20 startups (out of 1,000+ startups that applied) to launch at the prestigious LAUNCH conference. It was well received by the respected judges and the audience.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ca-itemblock-attachment">
+                                	<div class="ca-itemblock-attachmentheader"> <i class="icon-attachment"></i> Attachment</div>
+                                    <div class="attachmentlists">
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines documents</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/pdf.png" ><br> proposal template</div>
+                                    <div class="ca-itemblock-attchmts"><img src="images/word.png" ><br> bussines</div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+                        <div class="ca-blockcount">4/4</div>
+					</div>
+                    <!-- block end -->
+				</div>
+			</div>
+            </div>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
+		<script type="text/javascript">
+			$('#ca-container').contentcarousel();
+		</script>
+    </body>
+</html>
